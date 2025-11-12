@@ -15,6 +15,11 @@
             <li><a href="../index.html">Inicio</a></li>
             <li><a href="Servicios.html">Servicios</a></li>
             <li><a href="contacto.html">Contacto</a></li>
+            <li>
+              <a href="carrito.html" class="carrito-icono">
+                🛒 <span id="contador-carrito">0</span>
+              </a>
+            </li>
           </ul>
         </nav>
       </header>
@@ -29,34 +34,9 @@
         <section class="productos-home">
           <h2>Herramientas y más</h2>
 
-          <div class="contenedor-tarjetas">
-            <article class="tarjeta-producto">
-              <img src="../img/Peladores de cable.jpg" alt="Pelacables" />
-              <h3 class="h3">Pelacables</h3>
-              <a href="contacto.html">
-                <p class="p">Precio: Consultar</p>
-              </a>
-            </article>
-
-            <article class="tarjeta-producto">
-              <img src="../img/Fusionadora.jpg" alt="Fusionadora" />
-              <h3 class="h3">Fusionadora</h3>
-              <a href="contacto.html">
-                <p class="p">Precio: Consultar</p>
-              </a>
-            </article>
-
-            <article class="tarjeta-producto">
-              <img src="../img/Fluke.jpg" alt="Fluke" />
-              <h3 class="h3">Fluke</h3>
-              <a href="contacto.html">
-                <p class="p">Precio: Consultar</p>
-              </a>
-            </article>
-          </div>
+          <div id="contenedor-tarjetas" class="contenedor-tarjetas"></div>
         </section>
       </main>
-
       <aside>
         <h2>Capacitaciones</h2>
         <p>¿Que son las redes y como funciona Internet?.</p>
@@ -86,6 +66,8 @@
         <div>
           <p>© 2025 Compumundo Hipermega Red. Todos los derechos reservados.</p>
         </div>
+      </footer>
     </div>
+    <script type="module" src="../js/herramientas.js"></script>
   </body>
 </html>

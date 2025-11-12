@@ -15,6 +15,11 @@
             <li><a href="../index.html">Inicio</a></li>
             <li><a href="Servicios.html">Servicios</a></li>
             <li><a href="contacto.html">Contacto</a></li>
+            <li>
+              <a href="carrito.html" class="carrito-icono">
+                🛒 <span id="contador-carrito">0</span>
+              </a>
+            </li>
           </ul>
         </nav>
       </header>
@@ -29,39 +34,7 @@
         <section class="productos-home">
           <h2>Lo necesario para implementar una red</h2>
 
-          <div class="contenedor-tarjetas">
-            <article class="tarjeta-producto">
-              <img src="../img/Cable UTP.jpg" alt="Cables de red" />
-              <h3 class="h3">Cables UTP</h3>
-              <a href="contacto.html">
-                <p class="p">Precio: Consultar</p>
-              </a>
-            </article>
-
-            <article class="tarjeta-producto">
-              <img src="../img/Fichas.jpg" alt="Fichas" />
-              <h3 class="h3">Fichas RJ45</h3>
-              <a href="contacto.html">
-                <p class="p">Precio: Consultar</p>
-              </a>
-            </article>
-
-            <article class="tarjeta-producto">
-              <img src="../img/Jacks.jpg" alt="Jacks" />
-              <h3 class="h3">Jacks</h3>
-              <a href="contacto.html">
-                <p class="p">Precio: Consultar</p>
-              </a>
-            </article>
-
-            <article class="tarjeta-producto">
-              <img src="../img/Patchcords.jpg" alt="Patchcords" />
-              <h3 class="h3">Patchcords</h3>
-              <a href="contacto.html">
-                <p class="p">Precio: Consultar</p>
-              </a>
-            </article>
-          </div>
+          <div id="contenedor-tarjetas" class="contenedor-tarjetas"></div>
         </section>
       </main>
 
@@ -96,5 +69,6 @@
         </div>
       </footer>
     </div>
+    <script type="module" src="../js/cableado.js"></script>
   </body>
 </html>

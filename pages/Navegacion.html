@@ -15,10 +15,14 @@
             <li><a href="../index.html">Inicio</a></li>
             <li><a href="Servicios.html">Servicios</a></li>
             <li><a href="contacto.html">Contacto</a></li>
+            <li>
+              <a href="carrito.html" class="carrito-icono">
+                🛒 <span id="contador-carrito">0</span>
+              </a>
+            </li>
           </ul>
         </nav>
       </header>
-
       <main>
         <article>
           <h2>
@@ -29,34 +33,9 @@
         <section class="productos-home">
           <h2>Velocidades acorde a tus requerimientos</h2>
 
-          <div class="contenedor-tarjetas">
-            <article class="tarjeta-producto">
-              <img src="../img/100Mbps.jpg" alt="100Mbps" />
-              <h3 class="h3">100 Mbps</h3>
-              <a href="contacto.html">
-                <p class="p">Precio: Consultar</p>
-              </a>
-            </article>
-
-            <article class="tarjeta-producto">
-              <img src="../img/500Mbps.jpg" alt="500Mbps" />
-              <h3 class="h3">500 Mbps</h3>
-              <a href="contacto.html">
-                <p class="p">Precio: Consultar</p>
-              </a>
-            </article>
-
-            <article class="tarjeta-producto">
-              <img src="../img/1Gbps.jpg" alt="1Gbps" />
-              <h3 class="h3">1 Gbps</h3>
-              <a href="contacto.html">
-                <p class="p">Precio: Consultar</p>
-              </a>
-            </article>
-          </div>
+          <div id="contenedor-tarjetas" class="contenedor-tarjetas"></div>
         </section>
       </main>
-
       <aside>
         <h2>Capacitaciones</h2>
         <p>¿Que son las redes y como funciona Internet?.</p>
@@ -86,6 +65,8 @@
         <div>
           <p>© 2025 Compumundo Hipermega Red. Todos los derechos reservados.</p>
         </div>
+      </footer>
+      <script type="module" src="../js/navegacion.js"></script>
     </div>
   </body>
 </html>

@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <title>Proyecto Frontend</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Carrito</title>
   </head>
   <body>
     <div class="grid-container">
@@ -12,10 +12,11 @@
         <h1>Compumundo Hipermega Red</h1>
         <nav>
           <ul>
-            <li><a href="./pages/Servicios.html">Servicios</a></li>
-            <li><a href="./pages/contacto.html">Contacto</a></li>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="Servicios.html">Servicios</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
             <li>
-              <a href="./pages/carrito.html" class="carrito-icono">
+              <a href="carrito.html" class="carrito-icono">
                 🛒 <span id="contador-carrito">0</span>
               </a>
             </li>
@@ -25,15 +26,11 @@
 
       <main>
         <article>
-          <h2>
-            Nos dedicamos a todo lo relacionado con las telecomunicaciones
-          </h2>
-          <p>Si pensas en Internet, pensas en Compumundo Hipermega Red!!!</p>
+          <h2 class="titulo-contacto">Carrito de compras</h2>
         </article>
-        <section class="productos-home">
-          <h2>Algunos de nuestros productos</h2>
-          <div id="contenedor-tarjetas" class="contenedor-tarjetas"></div>
-        </section>
+        <section id="contenedor-carrito"></section>
+        <div class="acciones-carrito" id="acciones-carrito"></div>
+        <section id="resumen-carrito"></section>
       </main>
 
       <aside>
@@ -67,6 +64,6 @@
         </div>
       </footer>
     </div>
-    <script type="module" src="./js/index.js"></script>
+    <script type="module" src="../js/carrito.js"></script>
   </body>
 </html>

@@ -338,7 +338,7 @@ aside p {
 /*                              Media Queries                                 */
 /* -------------------------------------------------------------------------- */
 
-/*@media (max-width: 768px) {
+@media (max-width: 768px) {
   .header {
     display: flex;
     flex-direction: column;
@@ -359,4 +359,4 @@ aside p {
     width: 80%;
     min-width: 400px;
   }
-}*/
+}

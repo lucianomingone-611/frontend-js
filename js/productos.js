@@ -8,7 +8,6 @@ export const herramientas = [
   },
   { id: "2", nombre: "Fusionadora", img: "/img/Fusionadora.jpg", precio: 1500 },
   { id: "3", nombre: "Fluke", img: "/img/Fluke.jpg", precio: 3500 },
-  { id: "4", nombre: "Fichas", img: "/img/Fichas.jpg", precio: 1300 },
 ];
 
 export const notebooks = [
@@ -60,13 +59,13 @@ export const productos = [
   },
   {
     id: "3",
-    nombre: "Navegación",
+    nombre: "Navegación y enlaces",
     img: "./img/Navegacion Internet.jpg",
     link: "./pages/Navegacion.html",
   },
   {
     id: "4",
-    nombre: "Notebooks",
+    nombre: "Notebooks y accesorios",
     img: "./img/Notebooks.jpg",
     link: "./pages/Notebooks.html",
   },

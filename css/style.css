@@ -6,11 +6,15 @@ body {
 
 .grid-container {
   display: grid;
-  grid-template-areas:
+  /*grid-template-areas:
     "header header"
     "main aside"
+    "footer footer";*/
+  grid-template-areas:
+    "header header"
+    "main main"
     "footer footer";
-  grid-template-columns: 3fr 1fr; /* main más ancho que aside */
+  /*grid-template-columns: 3fr 1fr; /* main más ancho que aside */
   grid-template-rows: 100px 1fr 60px;
   gap: 10px;
   min-height: 100vh;
@@ -61,21 +65,14 @@ main {
   grid-area: main;
   background: #ddd;
   padding: 20px;
-  place-items: center;
-  /*flex-direction: column;
-  align-items: flex-start; /* 👈 coloca los elementos (como article) a la izquierda */
+  place-items: initial;
 }
 
-.main-h2 {
-  align-items: flex-start; /* fuerza al article a alinearse a la izquierda
-  text-align: left;*/
-}
-
-aside {
+/*aside {
   grid-area: aside;
   background: #ccc;
   padding: 20px;
-}
+}*/
 
 .footer {
   grid-area: footer;
@@ -181,7 +178,6 @@ aside p {
 
 .seccion-contacto {
   width: 100%;
-
   margin: 2rem auto;
 }
 
@@ -249,7 +245,6 @@ aside p {
 
 .seccion-servicio {
   width: 100%;
-
   margin: 2rem auto;
 }
 
@@ -302,6 +297,8 @@ aside p {
 }
 .acciones-carrito {
   margin-top: 2rem;
+  align-items: center;
+  margin-left: 40%;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -332,6 +329,9 @@ aside p {
 .btn-vaciar-carrito {
   background-color: red;
   border: 2px solid red;
+  align-items: center;
+  margin-right: auto;
+  justify-items: center;
 }
 
 .btn-vaciar-carrito:hover {

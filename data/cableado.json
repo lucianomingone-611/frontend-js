@@ -1,0 +1,21 @@
+[
+  {
+    "id": "1",
+    "nombre": "Cables UTP",
+    "img": "img/Cable UTP.jpg",
+    "precio": 1000
+  },
+  {
+    "id": "2",
+    "nombre": "Fichas RJ45",
+    "img": "img/Fichas.jpg",
+    "precio": 750
+  },
+  { "id": "3", "nombre": "Jacks", "img": "img/Jacks.jpg", "precio": 750 },
+  {
+    "id": "4",
+    "nombre": "Patchcords",
+    "img": "img/Patchcords.jpg",
+    "precio": 800
+  }
+]

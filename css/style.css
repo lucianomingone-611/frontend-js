@@ -6,15 +6,10 @@ body {
 
 .grid-container {
   display: grid;
-  /*grid-template-areas:
-    "header header"
-    "main aside"
-    "footer footer";*/
   grid-template-areas:
     "header header"
     "main main"
     "footer footer";
-  /*grid-template-columns: 3fr 1fr; /* main más ancho que aside */
   grid-template-rows: 100px 1fr 60px;
   gap: 10px;
   min-height: 100vh;
@@ -68,11 +63,11 @@ main {
   place-items: initial;
 }
 
-/*aside {
-  grid-area: aside;
-  background: #ccc;
-  padding: 20px;
-}*/
+.borde {
+  color: black;
+  text-shadow: -1px -1px 0 whitesmoke, 1px -1px 0 black, -1px 1px 0 whitesmoke,
+    1px 1px 0 black;
+}
 
 .footer {
   grid-area: footer;
@@ -135,16 +130,6 @@ main {
 
 .p {
   color: whitesmoke;
-}
-
-aside p {
-  color: #999;
-  font-size: 15px;
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: left;
-  display: flex;
-  padding: 0;
-  width: auto;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -298,7 +283,6 @@ aside p {
 .acciones-carrito {
   margin-top: 2rem;
   align-items: center;
-  margin-left: 40%;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -327,11 +311,10 @@ aside p {
 }
 
 .btn-vaciar-carrito {
+  display: flex;
   background-color: red;
   border: 2px solid red;
-  align-items: center;
-  margin-right: auto;
-  justify-items: center;
+  justify-self: center;
 }
 
 .btn-vaciar-carrito:hover {

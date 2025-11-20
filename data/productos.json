@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "nombre": "Cableado Estructurado",
+    "img": "img/Cables de red.jpg",
+    "link": "pages/Cables-de-red.html"
+  },
+  {
+    "id": "2",
+    "nombre": "Herramientas y equipamiento",
+    "img": "img/Herramientas.jpg",
+    "link": "pages/Herramientas.html"
+  },
+  {
+    "id": "3",
+    "nombre": "Navegación y enlaces",
+    "img": "img/Navegacion Internet.jpg",
+    "link": "pages/Navegacion.html"
+  },
+  {
+    "id": "4",
+    "nombre": "Notebooks y accesorios",
+    "img": "img/Notebooks.jpg",
+    "link": "pages/Notebooks.html"
+  }
+]

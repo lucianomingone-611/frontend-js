@@ -1,0 +1,15 @@
+[
+  {
+    "id": "1",
+    "nombre": "Pelacables",
+    "img": "img/Peladores de cable.jpg",
+    "precio": 300
+  },
+  {
+    "id": "2",
+    "nombre": "Fusionadora",
+    "img": "img/Fusionadora.jpg",
+    "precio": 1500
+  },
+  { "id": "3", "nombre": "Fluke", "img": "img/Fluke.jpg", "precio": 3500 }
+]

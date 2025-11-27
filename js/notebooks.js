@@ -1,4 +1,3 @@
-import { notebooks } from "./productos.js";
 import { agregarAlCarrito } from "./funcionesCarrito.js";
 import { obtenerCarrito } from "./storage.js";
 import { actualizarContador } from "./ui.js";
@@ -9,41 +8,55 @@ document.addEventListener("DOMContentLoaded", () => {
   const carrito = obtenerCarrito();
   actualizarContador(carrito);
 
-  notebooks.forEach((notebook) => {
-    //Creo el artículo
-    const tarjeta = document.createElement("article");
-    tarjeta.classList.add("tarjeta-producto");
+  fetch("../data/notebooks.json")
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error(`Error HTTP status: ${res.status}`);
+      }
 
-    //Creo la imagen del artículo
-    const img = document.createElement("img");
-    img.src = `../${notebook.img}`;
-    img.alt = notebook.nombre;
+      return res.json();
+    })
 
-    //Creo el título del artículo
-    const titulo = document.createElement("h3");
-    titulo.classList.add("titulo-producto");
-    titulo.textContent = notebook.nombre;
+    .then((data) => {
+      data.forEach((notebook) => {
+        //Creo el artículo
+        const tarjeta = document.createElement("article");
+        tarjeta.classList.add("tarjeta-producto");
 
-    //Creo el precio del artículo
-    const precio = document.createElement("p");
-    precio.classList.add("precio-producto");
-    precio.textContent = `$${notebook.precio}`;
+        //Creo la imagen del artículo
+        const img = document.createElement("img");
+        img.src = `../${notebook.img}`;
+        img.alt = notebook.nombre;
 
-    const boton = document.createElement("button");
-    boton.classList.add("btn");
-    boton.textContent = "Agregar al carrito";
+        //Creo el título del artículo
+        const titulo = document.createElement("h3");
+        titulo.classList.add("titulo-producto");
+        titulo.textContent = notebook.nombre;
 
-    boton.addEventListener("click", () => {
-      agregarAlCarrito(notebook);
+        //Creo el precio del artículo
+        const precio = document.createElement("p");
+        precio.classList.add("precio-producto");
+        precio.textContent = `$${notebook.precio}`;
+
+        const boton = document.createElement("button");
+        boton.classList.add("btn");
+        boton.textContent = "Agregar al carrito";
+
+        boton.addEventListener("click", () => {
+          agregarAlCarrito(notebook);
+        });
+
+        //Aca se crea el artículo con todo lo anterior
+        tarjeta.appendChild(img);
+        tarjeta.appendChild(titulo);
+        tarjeta.appendChild(precio);
+        tarjeta.appendChild(boton);
+
+        //Una vez creado, se agrega al contenedor
+        contenedor.appendChild(tarjeta);
+      });
+    })
+    .catch((err) => {
+      console.log(err);
     });
-
-    //Aca se crea el artículo con todo lo anterior
-    tarjeta.appendChild(img);
-    tarjeta.appendChild(titulo);
-    tarjeta.appendChild(precio);
-    tarjeta.appendChild(boton);
-
-    //Una vez creado, se agrega al contenedor
-    contenedor.appendChild(tarjeta);
-  });
 });

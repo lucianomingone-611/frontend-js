@@ -1,4 +1,3 @@
-import { herramientas } from "./productos.js";
 import { agregarAlCarrito } from "./funcionesCarrito.js";
 import { obtenerCarrito } from "./storage.js";
 import { actualizarContador } from "./ui.js";
@@ -9,41 +8,54 @@ document.addEventListener("DOMContentLoaded", () => {
   const carrito = obtenerCarrito();
   actualizarContador(carrito);
 
-  herramientas.forEach((herramienta) => {
-    //Creo el artículo
-    const tarjeta = document.createElement("article");
-    tarjeta.classList.add("tarjeta-producto");
+  fetch("../data/herramientas.json")
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error(`Error HTTP status: ${res.status}`);
+      }
 
-    //Creo la imagen del artículo
-    const img = document.createElement("img");
-    img.src = `../${herramienta.img}`;
-    img.alt = herramienta.nombre;
+      return res.json();
+    })
+    .then((data) => {
+      data.forEach((herramienta) => {
+        //Creo el artículo
+        const tarjeta = document.createElement("article");
+        tarjeta.classList.add("tarjeta-producto");
 
-    //Creo el título del artículo
-    const titulo = document.createElement("h3");
-    titulo.classList.add("titulo-producto");
-    titulo.textContent = herramienta.nombre;
+        //Creo la imagen del artículo
+        const img = document.createElement("img");
+        img.src = `../${herramienta.img}`;
+        img.alt = herramienta.nombre;
 
-    //Creo el precio del artículo
-    const precio = document.createElement("p");
-    precio.classList.add("precio-producto");
-    precio.textContent = `$${herramienta.precio}`;
+        //Creo el título del artículo
+        const titulo = document.createElement("h3");
+        titulo.classList.add("titulo-producto");
+        titulo.textContent = herramienta.nombre;
 
-    const boton = document.createElement("button");
-    boton.classList.add("btn");
-    boton.textContent = "Agregar al carrito";
+        //Creo el precio del artículo
+        const precio = document.createElement("p");
+        precio.classList.add("precio-producto");
+        precio.textContent = `$${herramienta.precio}`;
 
-    boton.addEventListener("click", () => {
-      agregarAlCarrito(herramienta);
+        const boton = document.createElement("button");
+        boton.classList.add("btn");
+        boton.textContent = "Agregar al carrito";
+
+        boton.addEventListener("click", () => {
+          agregarAlCarrito(herramienta);
+        });
+
+        //Aca se crea el artículo con todo lo anterior
+        tarjeta.appendChild(img);
+        tarjeta.appendChild(titulo);
+        tarjeta.appendChild(precio);
+        tarjeta.appendChild(boton);
+
+        //Una vez creado, se agrega al contenedor
+        contenedor.appendChild(tarjeta);
+      });
+    })
+    .catch((err) => {
+      console.log(err);
     });
-
-    //Aca se crea el artículo con todo lo anterior
-    tarjeta.appendChild(img);
-    tarjeta.appendChild(titulo);
-    tarjeta.appendChild(precio);
-    tarjeta.appendChild(boton);
-
-    //Una vez creado, se agrega al contenedor
-    contenedor.appendChild(tarjeta);
-  });
 });
